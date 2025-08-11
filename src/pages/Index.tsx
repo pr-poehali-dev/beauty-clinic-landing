@@ -74,64 +74,69 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-opensans">
+    <div className="min-h-screen bg-background font-opensans">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+      <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-montserrat font-bold text-primary">
-            Beauty Clinic
-          </h1>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+              <Icon name="Sparkles" size={20} className="text-primary" />
+            </div>
+            <h1 className="text-2xl font-montserrat font-bold text-primary">
+              Beauty Clinic
+            </h1>
+          </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-gray-600 hover:text-accent transition-colors">Услуги</a>
-            <a href="#doctors" className="text-gray-600 hover:text-accent transition-colors">Врачи</a>
-            <a href="#reviews" className="text-gray-600 hover:text-accent transition-colors">Отзывы</a>
-            <a href="#contacts" className="text-gray-600 hover:text-accent transition-colors">Контакты</a>
+            <a href="#services" className="text-muted-foreground hover:text-accent transition-colors font-medium">Услуги</a>
+            <a href="#doctors" className="text-muted-foreground hover:text-accent transition-colors font-medium">Врачи</a>
+            <a href="#reviews" className="text-muted-foreground hover:text-accent transition-colors font-medium">Отзывы</a>
+            <a href="#contacts" className="text-muted-foreground hover:text-accent transition-colors font-medium">Контакты</a>
           </nav>
-          <Button className="bg-accent hover:bg-accent/90 text-primary font-medium">
+          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
             Записаться
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-white to-gray-50">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-background via-background to-accent/5">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <h2 className="text-5xl lg:text-6xl font-montserrat font-light text-primary leading-tight">
-                Красота и здоровье 
-                <span className="font-medium text-accent"> вашей кожи</span>
+                Профессиональная 
+                <span className="font-semibold text-accent block">косметология</span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Профессиональная косметология с использованием современных технологий 
-                и индивидуальным подходом к каждому клиенту
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                Современные технологии ухода за кожей, индивидуальный подход к каждому клиенту и гарантированный результат
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary font-medium px-8">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4">
+                  <Icon name="Calendar" size={20} className="mr-2" />
                   Записаться на консультацию
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
+                <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4">
                   <Icon name="Phone" size={20} className="mr-2" />
                   +7 (495) 123-45-67
                 </Button>
               </div>
             </div>
             <div className="relative animate-scale-in">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-accent/20 to-primary/5">
                 <img 
-                  src="/img/36f55a24-cca9-42fa-95b4-6fffaa8d3e2a.jpg" 
+                  src="/img/162687be-0e32-4d9e-86a6-68922bcdea47.jpg" 
                   alt="Современная косметологическая клиника" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-3">
+              <div className="absolute -bottom-6 -right-6 bg-background p-6 rounded-2xl shadow-xl border border-border animate-float">
+                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
                     <Icon name="Award" size={24} className="text-accent" />
                   </div>
                   <div>
-                    <p className="font-montserrat font-semibold text-primary">500+</p>
-                    <p className="text-sm text-gray-600">Довольных клиентов</p>
+                    <p className="font-montserrat font-bold text-primary text-lg">Лучшая клиника</p>
+                    <p className="text-sm text-muted-foreground">2024 года в Москве</p>
                   </div>
                 </div>
               </div>
